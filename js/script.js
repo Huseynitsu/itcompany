@@ -1,3 +1,28 @@
+// numbers
+let nums = document.querySelectorAll(".box .number");
+let section = document.querySelector(".two");
+let started = false; // Function Started ? No
+
+window.onscroll = function () {
+    if (window.scrollY >= section.offsetTop) {
+        if (!started) {
+            nums.forEach((num) => startCount(num));
+        }
+        started = true;
+    }
+};
+
+function startCount(el) {
+    let goal = el.dataset.goal;
+    let count = setInterval(() => {
+        el.textContent++;
+        if (el.textContent == goal) {
+            clearInterval(count);
+        }
+    }, 2000 / goal);
+}
+
+// partnors
 var btn = document.querySelectorAll('.mouse-cursor-gradient-tracking')
 for (let i = 0; i < btn.length; i++) {
     btn[i].onmousemove = function (e) {
@@ -31,38 +56,91 @@ $(document).ready(function () {
         }
     });
 
-    var carouselSlider = new Swiper('.service-slider__container', {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
+    var swiper = new Swiper(".swiper-container-h", {
+        direction: "horizontal",
+        effect: "slide",
+        autoplay: {
+            delay: 10000,
+            disableOnInteraction: false,
+        },
+        parallax: true,
+        speed: 1600,
+        rtl: true,
         loop: true,
-        speed: 1000,
+        loopFillGroupWithBlank: !0,
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+            draggable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+    });
+    var swiper = new Swiper(".swiper-container-h1", {
+        direction: "horizontal",
+        effect: "slide",
+        autoplay: false,
+        parallax: true,
+        speed: 1600,
+        rtl: true,
+        loop: true,
+        loopFillGroupWithBlank: !0,
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+            draggable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+            clickable: "true",
+        },
+    });
+
+    var swiper = new Swiper(".swiper-container-h1", {
+        direction: "horizontal",
+        effect: "slide",
         autoplay: true,
-        spaceBetween: 5,
-        breakpoints: {
-            1499: {
-                slidesPerView: 3,
-                slidesPerGroup: 3
-            },
-            1200: {
-                slidesPerView: 3,
-                slidesPerGroup: 3
-            },
-
-            991: {
-                slidesPerView: 2,
-                slidesPerGroup: 2
-            },
-
-            767: {
-                slidesPerView: 1,
-                slidesPerGroup: 1
-
-            },
-
-            575: {
-                slidesPerView: 1,
-                slidesPerGroup: 1
-            }
-        }
+        parallax: true,
+        speed: 1600,
+        rtl: true,
+        loop: true,
+        loopFillGroupWithBlank: !0,
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+            draggable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next2",
+            prevEl: ".swiper-button-prev2",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+            clickable: "true",
+        },
     });
 });
