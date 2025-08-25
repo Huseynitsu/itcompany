@@ -400,13 +400,13 @@ header .btn {
 
 /* advantages */
 
-.two {
+.advantages {
     background-color: #eee;
     padding: 50px 0;
     text-align: center;
 }
 
-.two .container h2 {
+.advantages .container h2 {
     text-transform: capitalize;
     font-size: 35px;
     margin: 0 auto 30px;
@@ -414,18 +414,18 @@ header .btn {
     width: fit-content;
 }
 
-.two .container .content {
+.advantages .container .content {
     display: flex;
     gap: 20px;
 }
 
 @media (max-width: 767px) {
-    .two .container .content {
+    .advantages .container .content {
         flex-direction: column;
     }
 }
 
-.two .container .box {
+.advantages .container .box {
     width: calc((100% - 60px) / 4);
     padding: 25px;
     text-align: center;
@@ -435,13 +435,13 @@ header .btn {
 }
 
 @media (max-width: 767px) {
-    .two .container .box {
+    .advantages .container .box {
         width: 100%;
     }
 }
 
-.two .container .box::before,
-.two .container .box::after {
+.advantages .container .box::before,
+.advantages .container .box::after {
     content: "";
     position: absolute;
     transition: 1s;
@@ -450,29 +450,29 @@ header .btn {
     background-color: crimson;
 }
 
-.two .container .box::before {
+.advantages .container .box::before {
     left: 0;
     top: 0;
 }
 
-.two .container .box::after {
+.advantages .container .box::after {
     right: 0;
     bottom: 0;
 }
 
-.two .container .box:hover:before,
-.two .container .box:hover:after {
+.advantages .container .box:hover:before,
+.advantages .container .box:hover:after {
     height: 100%;
 }
 
-.two .container .box .number {
+.advantages .container .box .number {
     font-size: 45px;
     font-weight: bold;
     margin-bottom: 15px;
     display: block;
 }
 
-.two .container .box .text {
+.advantages .container .box .text {
     font-weight: bold;
     color: crimson;
     font-size: 20px;

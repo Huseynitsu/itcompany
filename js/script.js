@@ -118,7 +118,7 @@ $(document).ready(function () {
     var swiper = new Swiper(".swiper-container-h1", {
         direction: "horizontal",
         effect: "slide",
-        autoplay: true,
+        autoplay: false,
         parallax: true,
         speed: 1600,
         rtl: true,
