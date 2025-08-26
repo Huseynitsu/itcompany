@@ -59,7 +59,7 @@
                     <img class="fixedlogo" width="100px" src="/img/innoteccolor.png" alt="logo">
                 </div>
                 <div class="header_right">
-                    <div class="d-flex  gap-3 align-items-end">
+                    <div class="d-lg-flex d-none gap-3 align-items-end">
                         <div class="slider-social">
                             <a target="_blank" href="#">
                                 <i class="fa-brands fa-instagram" aria-hidden="true"></i>
@@ -76,7 +76,7 @@
                             </a>
                         </div>
                     </div>
-                    <nav>
+                    <nav class="d-lg-block d-none">
                         <ul>
                             <li><a href="#about">О компании</a></li>
                             <li><a href="#workprocess">Процесс работы</a></li>
@@ -87,7 +87,50 @@
                         </ul>
                     </nav>
                     <button data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        class="fw-bold ht-btn ht-btn-md">Отправить запрос</button>
+                        class="d-lg-block d-none fw-bold ht-btn ht-btn-md">Отправить запрос</button>
+                    <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                        class="threeline gap-1 d-lg-none d-flex flex-column">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Навигация</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <nav>
+                                <ul>
+                                    <li><a href="#about">О компании</a></li>
+                                    <li><a href="#workprocess">Процесс работы</a></li>
+                                    <li><a href="#services">Услуги</a></li>
+                                    <li><a href="#findus">Найдите нас</a></li>
+                                    <li><a href="#partners">Партнеры</a></li>
+                                    <li><a href="#call-to-action">Контакт</a></li>
+                                </ul>
+                            </nav>
+                            <div class="d-flex gap-3 align-items-end">
+                                <div class="slider-social">
+                                    <a target="_blank" href="#">
+                                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="slider-social">
+                                    <a target="_blank" href="#">
+                                        <i class="fa-brands fa-telegram"></i>
+                                    </a>
+                                </div>
+                                <div class="slider-social">
+                                    <a target="_blank" href="#">
+                                        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -114,8 +157,8 @@
                                 <div class="col-lg-6">
                                     <div class="preview-inner-img">
                                         <img class="img-fluid min-img  animation_images one wow fadeInDown animated"
-                                            src="https://htmldemo.net/mitech/assets/images/hero/mitech-landing-main-slider-slide-01-image-04.webp"
-                                            width="939" height="696" alt=""
+                                            src="/img/aboutphoto.png"
+                                            width="480" height="296" alt=""
                                             style="visibility: visible; animation-name: animateUpDown;">
                                     </div>
                                 </div>
@@ -155,8 +198,8 @@
                                 <div class="col-lg-6">
                                     <div class="preview-inner-img">
                                         <img class="img-fluid min-img  animation_images one wow fadeInDown animated"
-                                            src="https://htmldemo.net/mitech/assets/images/hero/mitech-landing-main-slider-slide-01-image-04.webp"
-                                            width="939" height="696" alt=""
+                                            src="/img/aboutphoto.png"
+                                            width="480" height="296" alt=""
                                             style="visibility: visible; animation-name: animateUpDown;">
                                     </div>
                                 </div>
@@ -540,7 +583,13 @@
                                     <a href="#about" data-hover="Компании">Компании</a>
                                 </li>
                                 <li class="footer_nav-item">
+                                    <a href="#workprocess" data-hover="Процесс работы">Процесс работы</a>
+                                </li>
+                                <li class="footer_nav-item">
                                     <a href="#services" data-hover="Услуги">Услуги</a>
+                                </li>
+                                <li class="footer_nav-item">
+                                    <a href="#findus" data-hover="Найдите нас">Найдите нас</a>
                                 </li>
                                 <li class="footer_nav-item">
                                     <a href="#partners" data-hover="Наши партнеры">Наши партнеры</a>
@@ -577,7 +626,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-6" id="footer-row-4">
-                        <div class="d-flex  gap-3 align-items-end justify-content-end">
+                        <div class="d-flex footer-social gap-3 align-items-end justify-content-end">
                             <div class="slider-social">
                                 <a target="_blank" href="#">
                                     <i class="fa-brands fa-instagram" aria-hidden="true"></i>

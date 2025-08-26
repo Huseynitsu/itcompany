@@ -293,6 +293,10 @@ header.fixed {
     display: flex;
 }
 
+.offcanvas-body ul {
+    flex-direction: column;
+}
+
 .slider-socials {
     position: absolute;
     right: 8%;
@@ -359,6 +363,10 @@ header.fixed .header__logo .fixedlogo {
     margin: 0;
 }
 
+.offcanvas-body nav ul li {
+    padding: 0;
+}
+
 .ht-btn {
     background: #c04f51;
     border: 1px solid #c04f51;
@@ -409,6 +417,10 @@ header.fixed .ht-btn {
     color: #ffffff;
 }
 
+.offcanvas-body nav ul li a {
+    color: #000;
+}
+
 .header_right nav ul li a::after {
     position: absolute;
     content: "";
@@ -434,6 +446,23 @@ header.fixed .header_right nav ul li a::after {
 
 header.fixed .header_right nav ul li a {
     color: #000;
+}
+
+.threeline {
+    padding: 1rem;
+    margin-left: 15px;
+    background-color: #fff;
+    border: 1px solid transparent;
+}
+
+header.fixed .threeline {
+    border: 1px solid #000;
+}
+
+.threeline span {
+    width: 15px;
+    background-color: #000;
+    height: 2px;
 }
 
 /* slider */
@@ -893,7 +922,7 @@ header .btn {
     }
 
     .pe-cta {
-        grid-template-columns: 84px 1fr;
+        grid-template-columns: 1fr;
     }
 
     .pe-cta-brand {
@@ -979,6 +1008,10 @@ header .btn {
 .main-services a:hover::after {
     right: -20%;
     top: -20%;
+}
+
+.main-services .dropdown-item img {
+    filter: invert(1);
 }
 
 .services_desc {
@@ -1561,5 +1594,79 @@ header .btn {
     100% {
         -webkit-transform: translateY(0px);
         transform: translateY(0px);
+    }
+}
+
+@media (max-width: 991px) {
+    #call-to-action .content_area {
+        padding: 15px;
+    }
+
+    #call-to-action .call_to_action_content h3 {
+        flex-direction: column;
+        font-size: 22px;
+    }
+
+    #call-to-action .forms_area {
+        flex-direction: column;
+    }
+
+    .forms_input {
+        width: 100%;
+    }
+
+    .main-services {
+        grid-template-columns: 1fr;
+    }
+
+    .section-11-cards button {
+        width: 100%;
+    }
+
+    #slider {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    #slider .img-fluid {
+        max-width: 100%;
+        height: auto;
+        opacity: .6;
+        filter: grayscale(1);
+    }
+
+    #slider h2,
+    #slider a {
+        position: relative;
+        z-index: 2;
+    }
+
+    header {
+        position: sticky;
+        padding: 5px 0;
+    }
+
+    .nofixedlogo {
+        display: none;
+    }
+
+    header .header__logo .fixedlogo {
+        display: block;
+        width: 55px;
+    }
+
+    .apply_for_footer {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer_bottom .row,
+    .footer-siteby,
+    .footer-social {
+        justify-content: center !important;
+        text-align: center;
     }
 }
