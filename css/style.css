@@ -11,6 +11,10 @@ body {
     /* background-color: #fcf3f3; */
 }
 
+section {
+    scroll-margin-top: 100px; /* header hündürlüyünə uyğun dəyiş */
+}
+
 a {
     color: #000;
     text-decoration: none;
