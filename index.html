@@ -18,11 +18,45 @@
 
 <body>
 
+    <div class="modal fade" id="exampleModal">
+        <div class="modal-dialog">
+            <div class="modal-content" bis_skin_checked="1">
+                <div class="modal-header" bis_skin_checked="1">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Напишите нам</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body" bis_skin_checked="1">
+
+                    <form id="modalform" method="post">
+                        <p style="margin-block:10px" id="modalresponse"></p>
+                        <div class="row" bis_skin_checked="1">
+                            <div class="col-12" bis_skin_checked="1">
+                                <input required="" type="text" name="name" class="effect" placeholder="Ваше имя">
+                            </div>
+                            <div class="col-12" bis_skin_checked="1">
+                                <input required="" type="number" name="phone" class="effect"
+                                    placeholder="Ваш номер телефона">
+                            </div>
+                            <div class="col-12" bis_skin_checked="1">
+                                <textarea rows="6" name="message" class="effect"
+                                    placeholder="Ваше сообщение"></textarea>
+                            </div>
+                            <div class="col-12" bis_skin_checked="1">
+                                <input class="btn submit-btn" type="submit" value="Отправить">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <div class="container-fluid container_fluid_150">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="header__logo">
-                    <img width="160px" src="/img/tuttilogo.png" alt="logo">
+                    <img class="nofixedlogo" width="100px" src="/img/logoinnotec.png" alt="logo">
+                    <img class="fixedlogo" width="100px" src="/img/innoteccolor.png" alt="logo">
                 </div>
                 <div class="header_right">
                     <div class="d-flex  gap-3 align-items-end">
@@ -44,13 +78,14 @@
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="#">Navbar 1</a></li>
-                            <li><a href="#">Navbar 2</a></li>
-                            <li><a href="#">Navbar 3</a></li>
-                            <li><a href="#">Navbar 4</a></li>
+                            <li><a href="#about">О компании</a></li>
+                            <li><a href="#services">Услуги</a></li>
+                            <li><a href="#partners">Партнеры</a></li>
+                            <li><a href="#call-to-action">Контакт</a></li>
                         </ul>
                     </nav>
-                    <button class="fw-bold ht-btn ht-btn-md">Purchase</button>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        class="fw-bold ht-btn ht-btn-md">Отправить запрос</button>
                 </div>
             </div>
         </div>
@@ -65,13 +100,12 @@
                             <div class="row align-items-center h-100">
                                 <div class="col-lg-6">
                                     <div class="preview-hero-text wow move-up animated" style="visibility: visible;">
-                                        <h6 class="mb-30">Technology and software</h6>
-                                        <h2 class="font-weight--reguler text-white mb-30 fw-bold">Mitech - A Technology,
-                                            Digital
-                                            Software
-                                            HTML Template</h2>
+                                        <h6 class="mb-30">INNOTEC ASTANA</h6>
+                                        <h2 class="font-weight--reguler text-white mb-30 fw-bold">Агентские услуги.
+                                            Широкий выбор товаров</h2>
                                         <div class="hero-button mt-40">
-                                            <a href="#section-demos" class="btn btn--white">Browse demos </a>
+                                            <a data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                class="btn btn--white">Отправить запрос </a>
                                         </div>
                                     </div>
                                 </div>
@@ -107,13 +141,12 @@
                             <div class="row align-items-center h-100">
                                 <div class="col-lg-6">
                                     <div class="preview-hero-text wow move-up animated" style="visibility: visible;">
-                                        <h6 class="mb-30">Technology and software</h6>
-                                        <h2 class="font-weight--reguler text-white mb-30 fw-bold">Mitech - A Technology,
-                                            Digital
-                                            Software
-                                            HTML Template</h2>
+                                        <h6 class="mb-30">INNOTEC ASTANA</h6>
+                                        <h2 class="font-weight--reguler text-white mb-30 fw-bold">Надёжная оптовая
+                                            торговля с 2015 года</h2>
                                         <div class="hero-button mt-40">
-                                            <a href="#section-demos" class="btn btn--white">Browse demos </a>
+                                            <a data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                class="btn btn--white">Отправить запрос </a>
                                         </div>
                                     </div>
                                 </div>
@@ -149,66 +182,67 @@
         </section>
         <section class="advantages">
             <div class="container">
-                <h2 class="sec_title">our awesome stats</h2>
+                <h2 class="sec_title">Наши преимущества</h2>
                 <div class="content">
                     <div class="box">
                         <div class="d-flex align-items-center justify-content-center gap-1 mb-4">
                             <span class="number" data-goal="150">0</span>
                             <span>+</span>
                         </div>
-                        <span class="text">clients</span>
+                        <span class="text">Клиентов</span>
                     </div>
                     <div class="box">
                         <div class="d-flex align-items-center justify-content-center gap-1 mb-4">
-                            <span class="number" data-goal="135">0</span>
+                            <span class="number" data-goal="10">0</span>
                             <span>+</span>
                         </div>
-                        <span class="text">projects</span>
-                    </div>
-                    <div class="box">
-                        <div class="d-flex align-items-center justify-content-center gap-1 mb-4">
-                            <span class="number" data-goal="50">0</span>
-                            <span>+</span>
-                        </div>
-                        <span class="text">countries</span>
+                        <span class="text">Лет</span>
                     </div>
                     <div class="box">
                         <div class="d-flex align-items-center justify-content-center gap-1 mb-4">
                             <span class="number" data-goal="500">0</span>
                             <span>+</span>
                         </div>
-                        <span class="text">money</span>
+                        <span class="text">Товаров</span>
+                    </div>
+                    <div class="box">
+                        <div class="d-flex align-items-center justify-content-center gap-1 mb-4">
+                            <span class="number" data-goal="150">0</span>
+                            <span>+</span>
+                        </div>
+                        <span class="text">Заказов/мес</span>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="layouts-section-wrap pt-5 section-space--pb_60">
+        <section id="about" class="layouts-section-wrap pt-5 section-space--pb_60">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <div class="layouts-images text-end">
-                            <img class="img-fluid"
-                                src="https://htmldemo.net/mitech/assets/images/preview/mitech-landing-blog-preview.webp"
-                                width="950" height="782" alt="">
+                        <div class="layouts-images text-center">
+                            <img class="img-fluid" src="/img/aboutphoto.png" width="500" height="782" alt="aboutphoto">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="layouts-section-text">
-                            <h3 class="heading"><span class="text-color-primary">04+ Blog</span> for Media News &amp;
-                                Social Events</h3>
-                            <p class="text mt-30">Blog sidebar widgets from Mitech come with an attention-grabbing
-                                feature image that can be configured from Customize menu. Choose a suitable layout for
-                                displaying images and craft valuable pieces of writing tu publish on your site.</p>
+                            <h3 class="heading"><span class="text-color-primary">INNOTEC ASTANA</span> компании</h3>
+                            <p class="text mt-30">Компания ТОО "INNOTEC ASTANA" зарегистрирована 15.04.2015 года.
+                                Компании ТОО "INNOTEC ASTANA" при регистрации присвоен БИН 150440017830. Присвоен ОКЭД
+                                46190 и основным видом деятельности является Деятельность агентов по оптовой торговле
+                                товарами широкого ассортимента. Юридический адрес компании: 010000, Г.АСТАНА, РАЙОН
+                                АЛМАТЫ, УЛ. ИМАНОВА, Д. 10/1. Руководитель ТОО "INNOTEC ASTANA" – АМИРЖАН АМИР
+                                БАЙЖАНУЛЫ.</p>
 
                             <div class="sider-title-button-box mt-30">
-                                <a href="blog-list-large-image.html" class="ht-btn ht-btn-md">Find out more</a>
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                    class="ht-btn ht-btn-md">Отправить запрос</a>
                             </div>
 
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <section id="services">
             <div class="container-fluid container_fluid_150">
                 <h2 class="sec_title">
@@ -275,40 +309,40 @@
                 </h2>
                 <div class="section-11-cards">
                     <button data-aos="fade-up" class="mouse-cursor-gradient-tracking aos-init aos-animate">
-                        <img src="/img/tuttired.png" alt="resant-log">
+                        <img src="/img/innoteccolor.png" alt="resant-log">
                     </button>
                     <button data-aos="fade-up" class="mouse-cursor-gradient-tracking aos-init aos-animate">
-                        <img src="/img/tuttired.png" alt="resant-log">
+                        <img src="/img/innoteccolor.png" alt="resant-log">
                     </button>
                     <button data-aos="fade-up" class="mouse-cursor-gradient-tracking aos-init aos-animate">
-                        <img src="/img/tuttired.png" alt="resant-log">
+                        <img src="/img/innoteccolor.png" alt="resant-log">
                     </button>
                     <button data-aos="fade-up" class="mouse-cursor-gradient-tracking aos-init aos-animate">
-                        <img src="/img/tuttired.png" alt="resant-log">
+                        <img src="/img/innoteccolor.png" alt="resant-log">
                     </button>
                     <button data-aos="fade-up" class="mouse-cursor-gradient-tracking aos-init aos-animate">
-                        <img src="/img/tuttired.png" alt="resant-log">
+                        <img src="/img/innoteccolor.png" alt="resant-log">
                     </button>
                     <button data-aos="fade-up" class="mouse-cursor-gradient-tracking aos-init aos-animate">
-                        <img src="/img/tuttired.png" alt="resant-log">
+                        <img src="/img/innoteccolor.png" alt="resant-log">
                     </button>
                     <button data-aos="fade-up" class="mouse-cursor-gradient-tracking aos-init aos-animate">
-                        <img src="/img/tuttired.png" alt="resant-log">
+                        <img src="/img/innoteccolor.png" alt="resant-log">
                     </button>
                     <button data-aos="fade-up" class="mouse-cursor-gradient-tracking aos-init aos-animate">
-                        <img src="/img/tuttired.png" alt="resant-log">
+                        <img src="/img/innoteccolor.png" alt="resant-log">
                     </button>
                     <button data-aos="fade-up" class="mouse-cursor-gradient-tracking aos-init aos-animate">
-                        <img src="/img/tuttired.png" alt="resant-log">
+                        <img src="/img/innoteccolor.png" alt="resant-log">
                     </button>
                     <button data-aos="fade-up" class="mouse-cursor-gradient-tracking aos-init aos-animate">
-                        <img src="/img/tuttired.png" alt="resant-log">
+                        <img src="/img/innoteccolor.png" alt="resant-log">
                     </button>
                     <button data-aos="fade-up" class="mouse-cursor-gradient-tracking aos-init aos-animate">
-                        <img src="/img/tuttired.png" alt="resant-log">
+                        <img src="/img/innoteccolor.png" alt="resant-log">
                     </button>
                     <button data-aos="fade-up" class="mouse-cursor-gradient-tracking aos-init aos-animate">
-                        <img src="/img/tuttired.png" alt="resant-log">
+                        <img src="/img/innoteccolor.png" alt="resant-log">
                     </button>
                 </div>
             </div>
@@ -322,7 +356,7 @@
                                 <h3>
                                     <img src="https://caspian-energy.az/img/shake.png" alt="" height="35px"
                                         width="35px">
-                                    Tələb olunan xanaları doldurun və ən qısa zamanda qiymət təklifini əldə edin.
+                                    Заполните обязательные поля и свяжитесь с нами как можно скорее.
                                 </h3>
                             </div>
                         </div>
@@ -332,22 +366,23 @@
                                     <div class="forms_textarea">
                                         <textarea id="textarea" aria-labelledby="help_you" required="true"
                                             name="help_you"></textarea>
-                                        <label for="textarea" class="call_label">Sizə necə kömək edə bilərik?</label>
+                                        <label for="textarea" class="call_label">Как мы можем вам помочь?</label>
                                     </div>
                                     <div class="forms_input">
                                         <input type="text" id="input-1" aria-labelledby="name_surname" required="true"
                                             name="name_surname">
-                                        <label for="input-1" class="call_label">Adınız soyadınız:</label>
+                                        <label for="input-1" class="call_label">Ваше имя и фамилия:</label>
                                     </div>
                                     <div class="forms_input">
                                         <input type="text" id="input-2" aria-labelledby="phone_number" required="true"
                                             name="phone_number">
-                                        <label for="input-2" class="call_label">Əlaqə nömrəniz:</label>
+                                        <label for="input-2" class="call_label">Контактный номер:</label>
                                     </div>
                                     <div class="forms_input">
                                         <input type="text" id="input-3" aria-labelledby="company" required="true"
                                             name="company">
-                                        <label for="input-3" class="call_label">Təmsil etdiyiniz şirkət:</label>
+                                        <label for="input-3" class="call_label">Компания, которую вы
+                                            представляете:</label>
                                     </div>
 
                                     <div class="forms_btn">
@@ -363,7 +398,7 @@
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <span>Online sorğu</span>
+                                            <span>Онлайн запрос</span>
                                         </button>
                                     </div>
                                 </div>
@@ -382,29 +417,28 @@
                     <div class="col-12 col-lg-2 col-md-6 col-sm-6" id="row-1">
                         <div class="footer_phone-wrap">
                             <h4 title="">
-                                Telefon</h4>
-                            <a href="tel:(+994 12) 310 22 00">(+994 12) 310 22 00</a>
+                                Телефон</h4>
+                            <a href="tel:(+xxx xx) xxx xx xx">(+xxx xx) xxx xx xx</a>
                         </div>
                     </div>
                     <div class="col-12 col-lg-2 col-md-6 col-sm-6" id="row-2">
                         <div class="footer_phone-wrap">
                             <h4 title="">
-                                Mobil</h4>
-                            <a href="tel:(+994 55) 613 91 16">(+994 55) 613 91 16</a>
+                                Телефон</h4>
+                            <a href="tel:(+xxx xx) xxx xx xx">(+xxx xx) xxx xx xx</a>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4 col-md-6 col-sm-6" id="row-3">
                         <div class="footer_phone-wrap">
                             <h4 title="">
-                                Ünvan</h4>
-                            <span class="phone-wrap-address" href="#">Bakı şəh,
-                                Abşeron rayon, Saray qəs, Polad Həşimov küç.</span>
+                                Адрес</h4>
+                            <span class="phone-wrap-address" href="#">Астана, район Байқоңыр, улица Иманова, 10/1</span>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4 col-md-6  col-sm-6" id="row-4">
                         <div class="apply_for_footer">
                             <button class="btn" type="button" name="apply">
-                                <div data-bs-toggle="modal" data-bs-target="#exampleModal"> Müraciət et</div>
+                                <div data-bs-toggle="modal" data-bs-target="#exampleModal"> Отправить запрос</div>
                             </button>
                         </div>
 
@@ -413,28 +447,16 @@
                         <div class="footer-menu">
                             <ul class="footer_menu-list">
                                 <li class="footer_nav-item">
-                                    <a href="/about/" data-hover="Şirkət">Şirkət</a>
+                                    <a href="#about" data-hover="Компании">Компании</a>
                                 </li>
                                 <li class="footer_nav-item">
-                                    <a href="/sertifikatlar/" data-hover="Sertifikatlar">Sertifikatlar</a>
+                                    <a href="#services" data-hover="Услуги">Услуги</a>
                                 </li>
                                 <li class="footer_nav-item">
-                                    <a href="/production/" data-hover="Məhsullar">Məhsullar</a>
+                                    <a href="#partners" data-hover="Наши партнеры">Наши партнеры</a>
                                 </li>
                                 <li class="footer_nav-item">
-                                    <a href="/production/" data-hover="Xidmətlər">Xidmətlər</a>
-                                </li>
-                                <li class="footer_nav-item">
-                                    <a href="/catdirilma/" data-hover="Çatdırılma">Çatdırılma</a>
-                                </li>
-                                <li class="footer_nav-item">
-                                    <a href="/catalogs/" data-hover="Kataloqlar">Kataloqlar</a>
-                                </li>
-                                <li class="footer_nav-item">
-                                    <a href="/vlogs" data-hover=" Blog"> Blog</a>
-                                </li>
-                                <li class="footer_nav-item">
-                                    <a href="/contact/" data-hover=" Əlaqə"> Əlaqə</a>
+                                    <a href="#call-to-action" data-hover="Контакт"> Контакт</a>
                                 </li>
                             </ul>
                         </div>
@@ -447,7 +469,7 @@
                 <div class="row">
                     <div class="col-12 col-lg-3 col-md-6 col-sm-6" id="footer-row-1">
                         <div class="footer-logo">
-                            <a href="/"><img src="/img/tuttilogo.png" alt="" width="200px" height="80px"></a>
+                            <a href="/"><img src="/img/logoinnotec.png" alt="" width="100px" height="60px"></a>
                         </div>
                     </div>
                     <div class="col-12 col-lg-3 col-md-6 col-sm-6" id="footer-row-2">
@@ -455,7 +477,7 @@
                             <p>©
                                 <script>
                                     document.write(new Date().getFullYear());
-                                </script> TUTTI
+                                </script> - INNOTEC Astana
                             </p>
                         </div>
                     </div>
