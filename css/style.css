@@ -985,6 +985,99 @@ header .btn {
     font-size: 14px;
 }
 
+/* find us */
+
+#findus {
+    background: url(/img/ce97c5b6318d8495f8ca.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tünd şəffaf overlay əlavə edirik ki, mətn oxunaqlı olsun */
+#findus::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* 50% qara örtük */
+    z-index: 0;
+}
+
+/* Bölmə məzmununu overlay üstündə göstərmək üçün */
+#findus>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Başlıq üçün stil */
+#findus h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Paraqraf üçün stil */
+#findus p {
+    max-width: 600px;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Düymə üçün */
+#findus .hero-button {
+    background-color: #c04f51;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
+}
+
+/* Düymə hover effekti */
+#findus .hero-button:hover,
+#findus .hero-button:focus {
+    background-color: #c04f51;
+    box-shadow: 0 6px 20px rgba(230, 85, 0, 0.6);
+    outline: none;
+    cursor: pointer;
+}
+
+/* Responsivlik: kiçik ekranlar üçün */
+@media (max-width: 480px) {
+    #findus h2 {
+        font-size: 1.8rem;
+    }
+
+    #findus p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    #findus .hero-button {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+
 /* partnyorlar */
 
 #partners {
