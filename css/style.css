@@ -125,6 +125,324 @@ input {
     padding-top: 100px;
 }
 
+/* whatsapp */
+
+/******STYLING WHATSAPP START**********/
+.fixed-whatsapp {
+    width: 50px;
+    height: 50px;
+    background: #25D366;
+    position: fixed;
+    bottom: 20px;
+    z-index: 1000;
+    right: 20px;
+    color: #fff;
+    animation: 1s infinite wpAnim;
+    box-shadow: 0 0 0 18px transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px
+}
+
+.fixed-whatsapp:hover a {
+    color: #fff;
+}
+
+@keyframes wpAnim {
+    0% {
+        box-shadow: 0 0 0 0 #25D366;
+    }
+}
+
+:root {
+    --eye-accent: #002161;
+    --eye-bg: #0f1726;
+    --eye-card: rgba(255, 255, 255, .08);
+    --eye-stroke: rgba(255, 255, 255, .16);
+    --eye-text: #e9eef7;
+    --eye-muted: #b9c3d6;
+}
+
+/* KONTEYNER və BACKDROP */
+.eye-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    /* gizli */
+    z-index: 9999;
+    color: var(--eye-text);
+
+    /* mərkəzləşdirmə */
+    justify-content: center;
+    align-items: center;
+}
+
+.eye-modal.is-open {
+    display: flex;
+}
+
+/* açıldıqda görünür */
+.eye-modal[aria-hidden="true"] {
+    display: none;
+}
+
+.eye-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(1200px 800px at 15% 15%, rgba(0, 33, 97, .25), transparent 60%),
+        radial-gradient(1000px 700px at 85% 85%, rgba(0, 33, 97, .18), transparent 60%),
+        rgba(6, 10, 18, .72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity .25s ease;
+}
+
+.eye-modal.is-open .eye-modal__backdrop {
+    opacity: 1;
+}
+
+/* DİALOQ KARTI */
+.eye-modal__dialog {
+    position: relative;
+    width: min(680px, 92vw);
+    border-radius: 24px;
+    padding: 22px 22px 16px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .06)) padding-box,
+        linear-gradient(140deg, rgba(255, 255, 255, .22), rgba(0, 33, 97, .55)) border-box;
+    border: 1px solid transparent;
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, .35),
+        inset 0 0 0 1px rgba(255, 255, 255, .08);
+    backdrop-filter: blur(14px) saturate(120%);
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+    transform: scale(.98);
+    opacity: 0;
+    transition: transform .35s cubic-bezier(.2, .8, .2, 1), opacity .35s ease;
+}
+
+.eye-modal.is-open .eye-modal__dialog {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* BAĞLA DÜYMƏSİ (X) */
+.eye-modal__close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .14);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: background .2s ease, transform .1s ease;
+}
+
+.eye-modal__close:hover {
+    background: rgba(255, 255, 255, .16);
+}
+
+.eye-modal__close:active {
+    transform: scale(.96);
+}
+
+.eye-modal__close span,
+.eye-modal__close span::before {
+    position: relative;
+    width: 16px;
+    height: 2px;
+    background: var(--eye-text);
+    display: block;
+    transform: rotate(45deg);
+    content: "";
+}
+
+.eye-modal__close span::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: rotate(90deg);
+}
+
+/* HEADER */
+.eye-modal__header {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    padding: 6px 6px 4px;
+    border-bottom: 1px solid var(--eye-stroke);
+}
+
+.eye-modal__icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background:
+        radial-gradient(60% 60% at 30% 30%, rgba(255, 255, 255, .28), transparent 60%),
+        linear-gradient(160deg, rgba(0, 33, 97, .85), rgba(0, 33, 97, .55));
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .16);
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+}
+
+.eye-modal__titles h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+.eye-modal__titles p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: var(--eye-muted);
+}
+
+/* GÖVDƏ və ALT HİSSƏ */
+.eye-modal__body {
+    padding: 16px 6px 8px;
+}
+
+.eye-modal__foot {
+    padding: 4px 6px 8px;
+}
+
+.eye-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.eye-badges span {
+    font-size: 12px;
+    color: var(--eye-muted);
+    border: 1px dashed rgba(255, 255, 255, .22);
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .05);
+}
+
+/* FORM LAYOUT */
+.eye-form {
+    display: grid;
+    gap: 14px;
+}
+
+.eye-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+@media (max-width:560px) {
+    .eye-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.eye-field label {
+    display: block;
+    font-size: 12px;
+    color: var(--eye-muted);
+    margin-bottom: 6px;
+    letter-spacing: .3px;
+}
+
+.eye-field input,
+.eye-field textarea,
+.eye-field select,
+.eye-field option {
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .06));
+    border: 1px solid rgba(255, 255, 255, .16);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .12);
+    color: var(--eye-text);
+    border-radius: 14px;
+    padding: 12px 14px;
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.eye-field option {
+    color: #000;
+}
+
+.eye-field input::placeholder,
+.eye-field textarea::placeholder {
+    color: #c9d3e8;
+    opacity: .6;
+}
+
+.eye-field input:focus,
+.eye-field textarea:focus {
+    /* color-mix dəstəklənməzsə, tünd mavi qalacaq */
+    border-color: color-mix(in srgb, var(--eye-accent) 70%, #ffffff 30%);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--eye-accent) 20%, transparent);
+    background: linear-gradient(180deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .08));
+}
+
+/* GÖNDƏR DÜYMƏSİ */
+.eye-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 48px;
+    border-radius: 14px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .3px;
+    background: linear-gradient(135deg, #00308f, #002161);
+    border: 1px solid rgba(255, 255, 255, .22);
+    box-shadow:
+        0 10px 24px rgba(0, 33, 97, .35),
+        inset 0 0 0 1px rgba(255, 255, 255, .12);
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .2s ease, filter .2s ease;
+    overflow: hidden;
+}
+
+.eye-btn:hover {
+    box-shadow: 0 14px 30px rgba(0, 33, 97, .45), inset 0 0 0 1px rgba(255, 255, 255, .16);
+    filter: saturate(1.1);
+}
+
+.eye-btn:active {
+    transform: translateY(1px);
+}
+
+.eye-btn__glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(180px 60px at 20% -20%, rgba(255, 255, 255, .35), transparent 60%),
+        radial-gradient(200px 70px at 80% 120%, rgba(255, 255, 255, .22), transparent 60%);
+    opacity: .9;
+    mix-blend-mode: soft-light;
+}
+
+/* HƏRƏKƏT AZALDIĞINDA */
+@media (prefers-reduced-motion: reduce) {
+
+    .eye-modal__dialog,
+    .eye-modal__backdrop,
+    .eye-btn {
+        transition: none !important;
+    }
+}
+
 /* Modal styling */
 .modal {
     display: none;
@@ -297,6 +615,10 @@ header.fixed {
     flex-direction: column;
 }
 
+.header_socials {
+    margin-right: 12px;
+}
+
 .slider-socials {
     position: absolute;
     right: 8%;
@@ -314,8 +636,8 @@ header.fixed {
     color: #000;
     fill: #000;
     /* border-radius: 50%; */
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -556,6 +878,57 @@ header .btn {
     box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.07);
 }
 
+.slider_btn {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #fff;
+    color: #fff;
+}
+
+.slider_btn span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+}
+
+.slider_btn:hover span {
+    color: #000;
+}
+
+.slider_btn::before,
+.slider_btn::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.slider_btn::before {
+    content: "";
+    background: #bbbbbc;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.slider_btn:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
 .pe-img-01 {
     position: absolute;
     top: -4%;
@@ -671,7 +1044,7 @@ header .btn {
 /* about */
 
 .layouts-section-text {
-    max-width: 100%;
+    max-width: 90%;
     width: 100%;
     margin: auto;
 }

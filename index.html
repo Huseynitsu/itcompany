@@ -5,6 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freelance IT</title>
+    <!-- Standart favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+    <!-- PNG favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/img/android-chrome-512x512.png">
+
+    <!-- Apple cihazları üçün -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
@@ -17,6 +30,87 @@
 </head>
 
 <body>
+
+    <a href="https://wa.me/#" target="_blank" class="fixed-whatsapp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <div class="eye-modal" id="appointmentModal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="eye-modal__backdrop"></div>
+
+        <div class="eye-modal__dialog" role="document">
+            <button class="eye-modal__close" type="button" aria-label="Закрыть">
+                <span></span>
+            </button>
+
+            <div class="eye-modal__header">
+                <div class="eye-modal__icon" aria-hidden="true">
+                    <!-- Иконка IT -->
+                    <svg viewBox="0 0 64 64" width="28" height="28" fill="none">
+                        <rect x="8" y="8" width="48" height="48" rx="8" stroke="#fff" stroke-width="2" />
+                        <path d="M16 24h32M16 32h32M16 40h20" stroke="#fff" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="eye-modal__titles">
+                    <h3>Запрос IT-услуги</h3>
+                    <p>Обратитесь за технической поддержкой, разработкой сайтов и другими услугами</p>
+                </div>
+            </div>
+
+            <div class="eye-modal__body">
+                <form class="eye-form" id="eyeForm">
+                    <div class="eye-field">
+                        <label>Ваше имя и фамилия</label>
+                        <input type="text" name="name" placeholder="Джейхун Рзаев" required>
+                    </div>
+
+                    <div class="eye-field">
+                        <label>Контактный номер</label>
+                        <input type="tel" name="phone" placeholder="+994 xx xxx xx xx" required>
+                    </div>
+
+                    <div class="eye-field">
+                        <label>Электронная почта</label>
+                        <input type="email" name="email" placeholder="primer@domain.com" required>
+                    </div>
+
+                    <div class="eye-field">
+                        <label>Выберите услугу</label>
+                        <select name="service" required>
+                            <option value="" disabled selected>Выберите услугу...</option>
+                            <option value="dev_qa">Разработка и тестирование ПО (веб/моб, интеграции, QA)</option>
+                            <option value="support">Сопровождение ПО / БД / сайтов / ИС</option>
+                            <option value="pm">Управление ИТ-проектами (PMO, сроки, бюджет)</option>
+                            <option value="architecture">Техдоки и системная архитектура (ТЗ, схемы, аудит)</option>
+                            <option value="consulting">ИТ-консалтинг (обследование, оптимизация)</option>
+                            <option value="maintenance">Системно-тех. обслуживание АПК (сервера, сети, ПК)</option>
+                            <option value="installation">Монтаж и настройка АПК (инфраструктура «под ключ»)</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+
+                    <div class="eye-field">
+                        <label>Дополнительная информация</label>
+                        <textarea name="msg" rows="3"
+                            placeholder="Кратко опишите проект или ваши потребности"></textarea>
+                    </div>
+
+                    <button class="eye-btn" type="submit">
+                        <span class="eye-btn__glow"></span>
+                        Отправить запрос
+                    </button>
+                </form>
+            </div>
+
+            <div class="eye-modal__foot">
+                <div class="eye-badges">
+                    <span>Более 10 лет опыта</span>
+                    <span>Решения для стартапов и бизнеса</span>
+                    <span>100+ успешных проектов</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="exampleModal">
         <div class="modal-dialog">
@@ -59,7 +153,17 @@
                     <img class="fixedlogo" width="100px" src="/img/innoteccolor.png" alt="logo">
                 </div>
                 <div class="header_right">
-                    <div class="d-lg-flex d-none gap-3 align-items-end">
+                    <nav class="d-lg-block d-none">
+                        <ul>
+                            <li><a href="#about">О компании</a></li>
+                            <li><a href="#workprocess">Процесс работы</a></li>
+                            <li><a href="#services">Услуги</a></li>
+                            <li><a href="#findus">Найдите нас</a></li>
+                            <li><a href="#partners">Партнеры</a></li>
+                            <li><a href="#call-to-action">Контакт</a></li>
+                        </ul>
+                    </nav>
+                    <div class="d-lg-flex d-none gap-3 align-items-end header_socials">
                         <div class="slider-social">
                             <a target="_blank" href="#">
                                 <i class="fa-brands fa-instagram" aria-hidden="true"></i>
@@ -76,18 +180,7 @@
                             </a>
                         </div>
                     </div>
-                    <nav class="d-lg-block d-none">
-                        <ul>
-                            <li><a href="#about">О компании</a></li>
-                            <li><a href="#workprocess">Процесс работы</a></li>
-                            <li><a href="#services">Услуги</a></li>
-                            <li><a href="#findus">Найдите нас</a></li>
-                            <li><a href="#partners">Партнеры</a></li>
-                            <li><a href="#call-to-action">Контакт</a></li>
-                        </ul>
-                    </nav>
-                    <button data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        class="d-lg-block d-none fw-bold ht-btn ht-btn-md">Отправить запрос</button>
+                    <button class="randevu d-lg-block d-none fw-bold ht-btn ht-btn-md">Отправить запрос</button>
                     <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
                         class="threeline gap-1 d-lg-none d-flex flex-column">
                         <span></span>
@@ -148,17 +241,15 @@
                                         <h6 class="mb-30">INNOTEC ASTANA</h6>
                                         <h2 class="font-weight--reguler text-white mb-30 fw-bold">Агентские услуги.
                                             Широкий выбор товаров</h2>
-                                        <div class="hero-button mt-40">
-                                            <a data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                class="btn btn--white">Отправить запрос </a>
-                                        </div>
+                                        <button class="slider_btn randevu">
+                                            <span>Отправить запрос</span>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="preview-inner-img">
                                         <img class="img-fluid min-img  animation_images one wow fadeInDown animated"
-                                            src="/img/aboutphoto.png"
-                                            width="480" height="296" alt=""
+                                            src="/img/aboutphoto.png" width="480" height="296" alt=""
                                             style="visibility: visible; animation-name: animateUpDown;">
                                     </div>
                                 </div>
@@ -189,17 +280,15 @@
                                         <h6 class="mb-30">INNOTEC ASTANA</h6>
                                         <h2 class="font-weight--reguler text-white mb-30 fw-bold">Надёжная оптовая
                                             торговля с 2015 года</h2>
-                                        <div class="hero-button mt-40">
-                                            <a data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                class="btn btn--white">Отправить запрос </a>
-                                        </div>
+                                        <button class="slider_btn">
+                                            <span>Отправить запрос</span>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="preview-inner-img">
                                         <img class="img-fluid min-img  animation_images one wow fadeInDown animated"
-                                            src="/img/aboutphoto.png"
-                                            width="480" height="296" alt=""
+                                            src="/img/aboutphoto.png" width="480" height="296" alt=""
                                             style="visibility: visible; animation-name: animateUpDown;">
                                     </div>
                                 </div>
@@ -271,16 +360,19 @@
                     <div class="col-lg-6">
                         <div class="layouts-section-text">
                             <h3 class="heading"><span class="text-color-primary">INNOTEC ASTANA</span> компании</h3>
-                            <p class="text mt-30">Компания ТОО "INNOTEC ASTANA" зарегистрирована 15.04.2015 года.
-                                Компании ТОО "INNOTEC ASTANA" при регистрации присвоен БИН 150440017830. Присвоен ОКЭД
-                                46190 и основным видом деятельности является Деятельность агентов по оптовой торговле
-                                товарами широкого ассортимента. Юридический адрес компании: 010000, Г.АСТАНА, РАЙОН
-                                АЛМАТЫ, УЛ. ИМАНОВА, Д. 10/1. Руководитель ТОО "INNOTEC ASTANA" – АМИРЖАН АМИР
-                                БАЙЖАНУЛЫ.</p>
+                            <p class="text mt-30">Мы — технологический партнёр для бизнеса в Казахстане и Центральной
+                                Азии, берём на себя полный цикл ИТ-работ: аналитика и системная архитектура, разработка
+                                и тестирование ПО, сопровождение и модернизация существующих решений, управление
+                                проектами и обслуживание инфраструктуры. Наша миссия — ускорять цифровую трансформацию
+                                клиентов за счёт надёжных и измеримых ИТ-решений, работая по прозрачным SLA и отвечая за
+                                результат «под ключ». Мы стремимся к будущему, где запуск и масштабирование ИТ-сервисов
+                                — предсказуемый и управляемый процесс с едиными стандартами качества, высокой
+                                доступностью и измеримой ценностью для бизнеса. Поэтому выстраиваем долгосрочные
+                                партнёрства, говорим на языке метрик, работаем быстро и аккуратно, следуем отраслевым
+                                стандартам и упрощаем технологии — чтобы вы могли сосредоточиться на росте.</p>
 
                             <div class="sider-title-button-box mt-30">
-                                <a data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                    class="ht-btn ht-btn-md">Отправить запрос</a>
+                                <a class="randevu ht-btn ht-btn-md">Отправить запрос</a>
                             </div>
 
                         </div>
@@ -357,7 +449,7 @@
                         <h3>Оставьте заявку — мы свяжемся</h3>
                         <p>Ответим на вопросы, оценим вашу ситуацию и предложим лучший маршрут.</p>
 
-                        <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="pe-btn" href="#">Получить
+                        <a class="randevu pe-btn" href="#">Получить
                             консультацию<span>→</span></a>
                     </div>
 
@@ -432,7 +524,7 @@
                 деятельности — оптовая торговля товарами широкого ассортимента.</p>
             <p>Юридический адрес: 010000, г. Астана, район Алматы, ул. Иманова, д. 10/1.<br>
                 Руководитель — Амиржан Амир Байжанулы.</p>
-            <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="hero-button btn" href="#">Отправить
+            <a class="randevu hero-button btn" href="#">Отправить
                 запрос</a>
         </section>
         <section id="partners">
@@ -541,6 +633,10 @@
                 </div>
             </div>
         </section>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2502.0491609140977!2d71.42873237632561!3d51.16288307173701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424586d2ad9b2b3d%3A0x6695e7924e48f7bf!2zMSwg0YPQu9C40YbQsCDQkNC80LDQvdCz0LXQu9GM0LTRiyDQmNC80LDQvdC-0LLQsCAxMCwg0JDRgdGC0LDQvdCwIDAxMDAwMCwg0JrQsNC30LDRhdGB0YLQsNC9!5e0!3m2!1sru!2saz!4v1756282508419!5m2!1sru!2saz"
+            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
 
     <footer id="footer">
@@ -570,8 +666,8 @@
                     </div>
                     <div class="col-12 col-lg-4 col-md-6  col-sm-6" id="row-4">
                         <div class="apply_for_footer">
-                            <button class="btn" type="button" name="apply">
-                                <div data-bs-toggle="modal" data-bs-target="#exampleModal"> Отправить запрос</div>
+                            <button class="btn randevu" type="button" name="apply">
+                                <div> Отправить запрос</div>
                             </button>
                         </div>
 

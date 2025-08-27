@@ -1,3 +1,58 @@
+(function () {
+    const buttons = document.querySelectorAll('.randevu');
+    const modal = document.getElementById('appointmentModal');
+    const close = modal.querySelector('.eye-modal__close');
+    const backdrop = modal.querySelector('.eye-modal__backdrop');
+    const firstInput = modal.querySelector('input, textarea, button');
+
+    function openModal() {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        // задержка для доступности: после рендера — фокус
+        setTimeout(() => firstInput && firstInput.focus(), 50);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    // Bütün .randevu düymələrinə event listener əlavə et
+    buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    });
+
+    close.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+            closeModal();
+        }
+    });
+
+    // Formun göndərilməsinin imitasiya hissəsi
+    document.getElementById('eyeForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const button = this.querySelector('.eye-btn');
+        const oldText = button.textContent;
+        button.disabled = true;
+        button.textContent = 'Отправка...';
+        setTimeout(() => {
+            button.textContent = 'Заявка отправлена ✓';
+            setTimeout(() => {
+                button.disabled = false;
+                button.textContent = oldText;
+                closeModal();
+            }, 1200);
+        }, 900);
+    });
+})();
+
 // numbers
 let nums = document.querySelectorAll(".box .number");
 let section = document.querySelector(".two");
